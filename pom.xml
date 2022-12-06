@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>BEJ_C2_S4_Testing_Repository_Layer_PC_1</artifactId>
+    <artifactId>BEJ_C3_S3_Containerize_Using_Docker_Compose_MC1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>BEJ_C2_S3_REST_API_MONGODB_PC_1</name>
     <description>Demo project for Spring Boot</description>

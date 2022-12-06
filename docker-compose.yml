@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  customer-service:
+    image: customer_image
+    container_name: customer-service
+    build: ./
+    restart: always
+    networks:
+      - mynetwork
+    ports:
+      - 8095:8095
+    depends_on:
+      - mongoService
+
+
+  mongoService:
+    image: mongo
+    container_name: mongoService
+    ports:
+      - 27017:27017
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
