@@ -2,24 +2,26 @@ version: '3.9'
 services:
   customer-service:
     image: customer_image
-    container_name: customer-service
+    container_name: authentication
     build: ./
     restart: always
     networks:
       - mynetwork
     ports:
-      - 8095:8095
+      - 8085:8085
     depends_on:
       - mongoService
 
 
   mongoService:
-    image: mongo
+    image: mongo:latest
     container_name: mongoService
-    ports:
-      - 27017:27017
     networks:
       - mynetwork
+    ports:
+      - 8090:8090
+
+
 
 networks:
   mynetwork:
